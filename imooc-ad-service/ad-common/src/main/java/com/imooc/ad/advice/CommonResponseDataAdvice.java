@@ -48,7 +48,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
 
         if (null == o) {
             return reponse;
-        } else if (reponse instanceof CommonResponse) {
+        } else if (o instanceof CommonResponse) {
             reponse = (CommonResponse<Object>) o;
         } else {
             reponse.setData(o);
